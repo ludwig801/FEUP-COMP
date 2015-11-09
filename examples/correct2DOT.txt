@@ -1,0 +1,25 @@
+digraph G {
+    compound = true;
+
+    subgraph cluster1{
+        penwidth=5.0; color=red;
+        NodeA[color=blue];
+        NodeB[];
+        NodeA -> NodeB[minlen=1.0, color=violet, dir=both, arrowtail=crow];
+    }
+
+    subgraph cluster2{
+        style=filled; fillcolor=grey;
+        NodeC[color=green, fontcolor=red, style=dashed, shape=tripleoctagon, margin=0.5];
+        Node4[style=dotted, shape=circle];
+        NodeC -> Node4[minlen=3.0, color=violetred, style=dotted];
+    }
+
+    subgraph cluster3{
+        NodeE[shape=polygon, sides=6, fontsize=30, fontcolor=skyblue];
+    }
+
+    NodeB -> NodeC[minlen=2.0, arrowhead=vee, style=dashed];
+    NodeC -> NodeE[minlen=4.0, arrowsize=2, dir=both, arrowtail=crow];
+    NodeA -> NodeE[minlen=4.0];
+}

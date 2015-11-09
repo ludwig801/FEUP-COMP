@@ -1,0 +1,20 @@
+{
+  "nodes":[
+    {"name":"NodeA","group":1, color=blue},
+    {"name":"NodeB","group":1},
+    {"name":"NodeC","group":2, color=acolor, fontcolor=red, style=dashed, shape=tripleoctagon, margin=0.5},
+    {"name":"Node4","group":2, style=dotted, shape=circle},
+    {"name":"NodeE","group":3, shape=polygon, sides=1, fontsize=30, fontcolor=skyblue}
+  ],
+  "links":[
+    {"source":NodeA,"target":1,"value":1, color=violet, direction=both, arrowtail=crow},
+    {"source":1,"target":2,"value":2, arrowhead=vee, style=dashed},
+    {"source":NodeF,"target":3,"value":3, color=violetred, style=dotted},
+    {"source":NodeC,"target":4,"value":4, arrowsize=2, dir=both, arrowtail=shape},
+    {"source":NodeA,"target":0,"value":4}
+  ],
+  "groups":[
+    {"group":1, penwidth=5.0, color=red},
+	{"group":6, penwidth=1.0}
+  ]
+}
